@@ -5,9 +5,14 @@ def find_max_odd(data):
         data: list of numbers
     returns: maximum odd number in the list
     """
-    i, _m_odd = 0, 0
-    while i < data[i]:
-        if _m_odd < data[i] and data[i] % 2 == 1:
-            _m_odd = data[i]
+    odd_data = []
+    i = 0
+    while i < len(data):
+        if data[i] % 2 == 1:
+            odd_data.append(data[i])          
         i += 1
-    return _m_odd
+    if odd_data:
+        odd_data.sort(reverse=True)
+        return odd_data[0]
+    else:
+        return -1
