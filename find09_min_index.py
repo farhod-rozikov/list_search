@@ -5,7 +5,7 @@ def find_min_index(data):
         data: list of numbers
     returns: index of minimum number in the list
     """
-    i, _min = 0, 0
+    i, _min = 0, data[0]
     while i < len(data):
         if _min > data[i]:
             _min = data[i]
