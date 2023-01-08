@@ -18,5 +18,7 @@ def find_max_even(data):
     if even_data:
         even_data.sort(reverse=True)
         return even_data[0]
+    else:
+        return -1
     
 print(find_max_even([1,3,7,9,5]))
