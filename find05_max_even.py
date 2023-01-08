@@ -1,3 +1,7 @@
+from audioop import reverse
+from pip import main
+
+
 def find_max_even(data):
     """
     Given the list of numbers, Find the maximum even number in the list
@@ -5,9 +9,14 @@ def find_max_even(data):
         data: list of numbers
     returns: maximum even number in the list
     """
-    data.sort()
+    even_data = []
     i = 0
     while i < len(data):
         if data[i] % 2 == 0:
-            return data[i]            
+            even_data.append(data[i])          
         i += 1
+    if even_data:
+        even_data.sort(reverse=True)
+        return even_data[0]
+    
+print(find_max_even([1,3,7,9,5]))
